@@ -1,4 +1,5 @@
 use std::io;
+use std::process;
 
 struct cliente {
     ID: String,
@@ -30,6 +31,17 @@ fn main() {
     iniciar_lista();
     loop {
         opcion = menu();
+
+        match opcion {
+            1 => intro(),
+            2 => borrar(),
+            3 => mostrar(),
+            4 => buscar(),
+            5 => guardar(),
+            6 => cargar(),
+            7 => ordenar(),
+            8 => process::exit(1),
+        }
     }
     //TODO: Ciclo infinito
     //TODO: Asignar valor a una función (todavia no se como)
