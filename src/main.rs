@@ -65,12 +65,5 @@ fn menu() -> i32 {
     return c;
 }
 
-fn LeerCadena(*indic:char, *s:char, cont:i32) -> () { //Maquetado temporal.
-    let cadena:String;
-
-    loop {
-        
-    }
-}
 
 
