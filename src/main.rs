@@ -40,9 +40,7 @@ fn iniciar_lista() -> () {
 }
 
 fn menu() -> i32 {
-    let s:String;
-
-    let c:i32;
+    let mut s = String::new();
 
     println!("1- Introducir un cliente");
     println!("2- Eliminar un cliente");
@@ -54,6 +52,12 @@ fn menu() -> i32 {
     println!("8- Salir");
     println!("9- Acerca de:");
 
-    return c
+    loop {
+        println!("Introduzca la opción deseada");
+        io::stdin().read_line(&mut s).unwrap();
+        let c:i32 = s.parse().unwrap();
+    }
 }
+
+
 
