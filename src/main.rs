@@ -27,7 +27,10 @@ struct cliente {
 fn main() {
     let opcion:i32;
 
-    //TODO: Función iniciar Lista
+    iniciar_lista();
+    loop {
+        opcion = menu();
+    }
     //TODO: Ciclo infinito
     //TODO: Asignar valor a una función (todavia no se como)
     //TODO: hacer un switch
@@ -62,8 +65,12 @@ fn menu() -> i32 {
     return c;
 }
 
-fn LeerCadena(&indic:char, &s:char, cont:i32) -> (){
+fn LeerCadena(*indic:char, *s:char, cont:i32) -> () { //Maquetado temporal.
+    let cadena:String;
 
+    loop {
+        
+    }
 }
 
 
