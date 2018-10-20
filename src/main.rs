@@ -54,7 +54,7 @@ fn menu() -> i32 {
     println!("Introduzca la opción deseada");
 
     io::stdin().read_line(&mut s).unwrap();
-   let c:i32 = s.parse().unwrap();
+    let c:i32 = s.parse().unwrap();
 
     loop {
         if c < 0 || c > 9 {  break;  }
@@ -62,5 +62,8 @@ fn menu() -> i32 {
     return c;
 }
 
+fn LeerCadena(&indic:char, &s:char, cont:i32) -> (){
+
+}
 
 
