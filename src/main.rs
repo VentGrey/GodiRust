@@ -41,12 +41,9 @@ fn main() {
             6 => cargar(),
             7 => ordenar(),
             8 => process::exit(1),
+            _ => panic!("¡ERROR, VOY A EXPLOTAR!"),
         }
     }
-    //TODO: Ciclo infinito
-    //TODO: Asignar valor a una función (todavia no se como)
-    //TODO: hacer un switch
-    //TODO: Excepción en caso de que el switch no jale
 }
 
 fn iniciar_lista() -> () {
