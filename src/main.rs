@@ -10,7 +10,7 @@ struct cliente {
     dia: u64,
     mes: u64,
     anio: u64,
-}
+} cliente[MAX];
 
 fn main() {
 
