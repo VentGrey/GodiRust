@@ -51,12 +51,15 @@ fn menu() -> i32 {
     println!("7- Ordenar archivo por nombre");
     println!("8- Salir");
     println!("9- Acerca de:");
+    println!("Introduzca la opción deseada");
+
+    io::stdin().read_line(&mut s).unwrap();
+   let c:i32 = s.parse().unwrap();
 
     loop {
-        println!("Introduzca la opción deseada");
-        io::stdin().read_line(&mut s).unwrap();
-        let c:i32 = s.parse().unwrap();
+        if c < 0 || c > 9 {  break;  }
     }
+    return c;
 }
 
 
