@@ -22,6 +22,10 @@ struct cliente {
 // * Iniciar lista
 // * buscar libre (parámetro: void)
 
-fn main() {
 
+// Función principal
+fn main() {
+    let opcion:i32;
+
+    
 }
