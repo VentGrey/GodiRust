@@ -25,7 +25,7 @@ struct cliente {
 
 // Función principal
 fn main() {
-    let opcion:i32;
+    let mut opcion:i32;
 
     iniciar_lista();
     loop {
