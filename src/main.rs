@@ -23,6 +23,15 @@ struct cliente {
 // * Iniciar lista
 // * buscar libre (parámetro: void)
 
+//Funcion acerca de:
+fn about() {
+    println!("GodiRust vX.X.X - Pre-pre Alpha");
+    println!("Licencia: GPL-2");
+    println!("Usando Rust Stable");
+    println!("Bibliotecas externas usadas:");
+
+    main();
+}
 
 // Función principal
 fn main() {
@@ -41,6 +50,7 @@ fn main() {
             6 => cargar(),
             7 => ordenar(),
             8 => process::exit(1),
+            9 => about(),
             _ => panic!("¡ERROR, VOY A EXPLOTAR!"),
         }
     }
