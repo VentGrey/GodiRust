@@ -5,6 +5,9 @@ use std::io::prelude::*;
 
 // Externas a la Biblioteca standard
 
+// Rust files externos
+mod files;
+
 struct cliente {
     ID: String,
     nombre: String,
@@ -87,15 +90,3 @@ fn menu() -> i32 {
     return c;
 }
 
-fn guardar() -> std::io::Result<()> {
-    let mut archivo = File::create("clientes.grs")?;
-    //file.write_all(b)?;
-    Ok(())
-}
-
-fn cargar() -> std::io::Result<()> {
-    let mut archivo = File::open("clientes.grs")?;
-    let mut contenido = String::new();
-    file.read_to_string(&mut contenido)?;
-    Ok(())
-}
