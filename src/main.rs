@@ -1,5 +1,9 @@
 use std::io;
 use std::process;
+use std::fs::File;
+use std::io::prelude::*;
+
+// Externas a la Biblioteca standard
 
 struct cliente {
     ID: String,
@@ -35,7 +39,7 @@ fn about() {
 
 // Función principal
 fn main() {
-    let mut opcion:i32;
+    let mut opcion: i32;
 
     iniciar_lista();
     loop {
@@ -76,13 +80,18 @@ fn menu() -> i32 {
     println!("Introduzca la opción deseada");
 
     io::stdin().read_line(&mut s).unwrap();
-    let c:i32 = s.parse().unwrap();
+    let c: i32 = s.parse().unwrap();
 
     loop {
-        if c < 0 || c > 9 {  break;  }
+        if c < 0 || c > 9 {
+            break;
+        }
     }
     return c;
 }
 
-
-
+fn guardar() -> std::io::Result<()> {
+    let mut archivo = File::create("clientes.grs")?;
+    //file.write_all(b)?;
+    Ok(())
+}
