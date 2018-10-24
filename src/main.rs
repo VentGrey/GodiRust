@@ -16,15 +16,12 @@ struct cliente {
 
 // Estas son las funciones básicas para que jale el programa
 // Funciones tipo void:
-// * Cargar
-// * Guardar
 // * Buscar
 // * Muestra (parámetro: int i)
 // * LeerCadena (parametros: puntero char indic, s e int contador)
 // * Borrar
 // * Intro
 // * Mostrar
-// * Iniciar lista
 // * buscar libre (parámetro: void)
 
 //Funcion acerca de:
@@ -93,5 +90,12 @@ fn menu() -> i32 {
 fn guardar() -> std::io::Result<()> {
     let mut archivo = File::create("clientes.grs")?;
     //file.write_all(b)?;
+    Ok(())
+}
+
+fn cargar() -> std::io::Result<()> {
+    let mut archivo = File::open("clientes.grs")?;
+    let mut contenido = String::new();
+    file.read_to_string(&mut contenido)?;
     Ok(())
 }
