@@ -1,12 +1,12 @@
 use std::io;
 use std::process;
-use std::fs::File;
-use std::io::prelude::*;
 
 // Externas a la Biblioteca standard
 
 // Rust files externos
-mod files;
+
+// Constant
+const MAX:i32 = 50;
 
 struct cliente {
     ID: String,
@@ -39,6 +39,9 @@ fn about() {
 
 // Función principal
 fn main() {
+
+    let v: Vec<cliente> = Vec::new();
+
     let mut opcion: i32;
 
     iniciar_lista();
