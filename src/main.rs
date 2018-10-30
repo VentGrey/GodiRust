@@ -18,18 +18,6 @@ struct cliente {
     FNAD:FECHA,
 }
 
-
-
-// Estas son las funciones básicas para que jale el programa
-// Funciones tipo void:
-// * Buscar
-// * Muestra (parámetro: int i)
-// * LeerCadena (parametros: puntero char indic, s e int contador)
-// * Borrar
-// * Intro
-// * Mostrar
-// * buscar libre (parámetro: void)
-
 //Funcion acerca de:
 fn about() {
     println!("GodiRust vX.X.X - Pre-pre Alpha");
@@ -47,10 +35,10 @@ fn main() {
 
     iniciar_lista();
     loop {
-        opcion = menu();
+        opcion = menu_inicial();
 
         match opcion {
-            1 => intro(),
+            1 => int_cliente(),
             2 => borrar(),
             3 => mostrar(),
             4 => buscar(),
@@ -68,18 +56,18 @@ fn iniciar_lista() -> () {
 
 }
 
-fn menu() -> i32 {
+fn menu_inicial() -> i32 {
     let mut s = String::new();
 
-    println!("1- Introducir un cliente");
-    println!("2- Eliminar un cliente");
-    println!("3- Listar los clientes");
-    println!("4- Buscar dentro del archivo");
-    println!("5- Guardar archivo");
-    println!("6- Cargar archivo");
-    println!("7- Ordenar archivo por nombre");
-    println!("8- Salir");
-    println!("9- Acerca de:");
+    println!("[1]° Introducir un cliente");
+    println!("[2]° Eliminar un cliente");
+    println!("[3]° Listar los clientes");
+    println!("[4]° Buscar dentro del archivo");
+    println!("[5]° Guardar archivo");
+    println!("[6]° Cargar archivo");
+    println!("[7]° Ordenar archivo por nombre");
+    println!("[8]° Salir");
+    println!("[9]° Acerca de:");
     println!("Introduzca la opción deseada");
 
     io::stdin().read_line(&mut s).unwrap();
@@ -93,3 +81,6 @@ fn menu() -> i32 {
     return c;
 }
 
+fn int_cliente() {
+    
+}
