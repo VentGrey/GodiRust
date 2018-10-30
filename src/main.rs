@@ -3,19 +3,22 @@ use std::process;
 
 // Externas a la Biblioteca standard
 
-// Rust files externos
+// Rust files extern
 
-// Constant
-const MAX:i32 = 50;
+struct FECHA {
+    dia:i32,
+    mes:i32,
+    anio:i32,
+}
 
 struct cliente {
-    ID: String,
-    nombre: String,
-    telefono: String,
-    dia: u64,
-    mes: u64,
-    anio: u64,
+    ID:i64,
+    Nom:String,
+    Tel:String,
+    FNAD:FECHA,
 }
+
+
 
 // Estas son las funciones básicas para que jale el programa
 // Funciones tipo void:
@@ -40,8 +43,6 @@ fn about() {
 // Función principal
 fn main() {
 
-    let v: Vec<cliente> = Vec::new();
-
     let mut opcion: i32;
 
     iniciar_lista();
@@ -64,8 +65,7 @@ fn main() {
 }
 
 fn iniciar_lista() -> () {
-    /* Sobres, vamos a calar los iteradores de Rust aquí */
-    //TODO: Iterador sobre un arreglo de estructuras
+
 }
 
 fn menu() -> i32 {
